@@ -1,0 +1,138 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); /* Fonte */
+
+/* Configurações gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    border: 1px dashed rgba(255, 255, 255, 0.233);
+    color: var(--font-color);
+}
+
+:root {
+    --font-display: "Inter", sans-serif;
+    --font-title: "DM Serif Display", serif;
+
+    --background: #0C0B09;
+    --primary: #E8608A;
+    --secundary: #C9A84C;
+    --font-color: #F0E8D5;
+    --font-color-reverse: rgb(20, 20, 19);
+}
+
+body {
+    position: relative;
+    background-color: var(--background);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-title);
+    font-weight: lighter;
+}
+
+/* Configurações MobileFirst */
+
+body {
+    padding: 0 16px;
+}
+
+h1 {font-size: 24px;}
+
+h2 {font-size: 20px;}
+
+h3 {font-size: 17px;}
+
+p {
+    font-family: var(--font-display);
+    font-size: 14px;
+    line-height: 1.5em;
+    margin: 0.75rem 0;
+}
+
+.logo {
+    font-family: var(--font-title);
+    color: var(--secundary);
+    font-size: 1em;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+    position: absolute;
+
+    padding: 5px 20px;
+}
+
+header > p.logo {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.459);
+}
+
+header > nav {
+    display: none;
+}
+
+header > a#botao {
+    padding: 10px 16px;
+    text-decoration: none;
+    background-color: var(--secundary);
+    color: var(--font-color-reverse);
+    border-radius: 6px;
+}
+
+#hero {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-basis: 200px;
+}
+
+.monalisa {
+    background-image: url(../imagens/monalisa.webp);
+    background-size: cover;
+    box-shadow: inset 0px -58px 42px var(--background);
+    height: 50vh;
+    width: 100vw;
+    align-self: center;
+}
+
+#hero .item {
+    flex-basis: 80px;
+}
+
+#hero > h1 {
+    text-transform: uppercase;
+}
+
+#hero p {
+    margin: 0;
+}
+
+#hero > span {
+    font-family: var(--font-display);
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+#hero > nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
