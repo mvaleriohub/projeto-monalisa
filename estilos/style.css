@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); /* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Tirra:wght@400;500;600;700;800&display=swap'); /* Fonte */
 
 /* Configurações gerais */
 
@@ -15,6 +15,7 @@
 :root {
     --font-display: "Inter", sans-serif;
     --font-title: "DM Serif Display", serif;
+    --button:"Tirra", Arial, sans-serif;
 
     --background: #0C0B09;
     --primary: #E8608A;
@@ -118,6 +119,8 @@ header > a#botao {
 }
 
 #hero > h1 {
+    font-family: var(--font-display);
+    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -133,6 +136,48 @@ header > a#botao {
 
 #hero > nav {
     display: flex;
+    flex-flow: column;
     align-items: center;
     justify-content: space-around;
+}
+
+#hero > nav > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    width: 80%;
+    height: 48px;
+}
+
+#hero > nav > a.ver-mais {
+    background-color: var(--primary);
+    color: var(--font-color-reverse);
+    font-family: var(--button);
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 9px;
+    border-radius: 6px;
+}
+
+#hero > nav > a.cta {
+    text-decoration-color: var(--secundary);
+    text-underline-offset: 6px;
+}
+
+#problema {
+    margin-top: 32px;
+    display: flex;
+    flex-flow: column;
+}
+
+#problema > h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#problema > h2 > span {
+    display: block;
+    color: var(--primary);
 }
