@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); /* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); /* Fonte */
 
 /* Configurações gerais */
 
@@ -7,21 +7,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    border: 1px dashed rgba(255, 255, 255, 0.233);
     color: var(--font-color);
 }
 
 :root {
     --font-display: "Inter", sans-serif;
     --font-title: "Inter", sans-serif;
-    --button: "Inter", sans-serif;
+    --font-button: "Inter", sans-serif;
     --serif: "DM Serif Display", serif;
 
-    --background: #0C0B09;
+    --background: #111008;
+    --background2: #161410;
     --primary: #E8608A;
     --secundary: #C9A84C;
-    --font-color: #F0E8D5;
+    
+    --font-color: #d4c9b0;
+    --title-color: #F0E8D5;
     --font-color-reverse: rgb(20, 20, 19);
 }
 
@@ -43,6 +44,7 @@ main {
 
 h1, h2, h3 {
     font-family: var(--font-title);
+    color: var(--title-color);
     font-weight: bold;
 }
 
@@ -110,31 +112,20 @@ header > a#botao {
     flex-basis: 200px;
 }
 
-.monalisa {
-    background-image: url(../imagens/monalisa-mobile.webp);
-    background-size: cover;
-    background-position: center bottom;
-    box-shadow: inset 0px -58px 42px var(--background);
-    height: 80vh;
-    width: 100vw;
-    align-self: center;
-}
-
-#hero {
-    display: flex;
-    flex-flow: column nowrap;
-    flex-basis: 200px;
+#hero p {
+    margin: 0;
 }
 
 .monalisa {
     display: flex;
     flex-flow: column nowrap;
+    justify-content: space-between;
     align-items: center;
     background-image: url(../imagens/monalisa-mobile.webp);
     background-size: cover;
     background-position: center bottom;
-    box-shadow: inset 0px -58px 42px var(--background);
-    height: 80vh;
+    box-shadow: inset 0px -94px 65px var(--background);
+    height: 100vh;
     width: 100vw;
     align-self: center;
 }
@@ -143,25 +134,67 @@ header > a#botao {
     flex-basis: 80px;
 }
 
-.monalisa > h1 {
+.monalisa > div.item {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.monalisa > div > h1 {
     margin-top: 80px;
     font-weight: bold;
     text-transform: uppercase;
     text-shadow: 0 0 50px rgb(0, 0, 0), 0 0 100px rgb(0, 0, 0);
 }
 
-.monalisa > h1 > span {
+.monalisa > div > h1 > span {
     color: var(--secundary);
 }
 
-#hero p {
-    margin: 0;
+.monalisa > .item > div.divisao {
+    width: 40px;
+    height: 1px;
+    background-color: var(--secundary);
+    margin: 12px auto 16px auto;
+}
+
+.monalisa > .item > p, .monalisa > .item > span.conti-p {
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    opacity: 0.75;
+    text-align: center;
+    max-width: 260px;
+    margin: 0 auto;
+    text-shadow: 0 0 50px rgb(0, 0, 0), 0 0 100px rgb(0, 0, 0);
 }
 
 .monalisa > .item > span.conti-p {
+    font-style: italic;
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.5em;
+}
+
+.monalisa > nav {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.monalisa > nav > a.cta {
+    background-color: var(--primary);
+    color: var(--font-color-reverse);
+    border-radius: 6px;
+    padding: 8px 0;
+    align-self: center;
+    font-family: var(--font-button);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 70%;
+    margin-bottom: 50px;
 }
 
 #problema {
@@ -178,4 +211,64 @@ header > a#botao {
 #problema > h2 > span {
     display: block;
     color: var(--primary);
+}
+
+#problema > p.text {
+    font-size: 14px;
+    line-height: 1.75;
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+#problema > p.mensao {
+    font-style: italic;
+    font-size: 13px;
+    color: var(--secundary);
+    border-left: 2px solid var(--secundary);
+    padding-left: 14px;
+    margin-top: 28px;
+    line-height: 1.7;
+}
+
+#main1 {
+    margin-top: 20px;
+    display: grid;
+    grid-template:  80px repeat(3, 1fr) / auto;
+    gap: 20px;
+    padding: 0 16px;
+}
+
+#main1 > h2 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    text-transform: uppercase;
+}
+
+#main1 > h2 > span {
+    display: block;
+    color: var(--primary);
+}
+
+#main1 > article {
+    background-color: var(--background2);
+    border-radius: 6px;
+    border-left: 1px solid var(--secundary);
+    padding: 20px 18px;
+}
+
+#main1 > article > h3 {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secundary);
+    margin-bottom: 10px;
+}
+
+#main1 > article > p {
+    font-size: 13px;
+    line-height: 1.75;
+    opacity: 0.85;
 }
