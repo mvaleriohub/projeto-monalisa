@@ -23,6 +23,7 @@
     --secundary: #C9A84C;
     
     --font-color: #d4c9b0;
+    --font-destaque: #F0E8D5;
     --title-color: #F0E8D5;
     --font-color-reverse: rgb(20, 20, 19);
 }
@@ -67,6 +68,11 @@ p {
     line-height: 1.5em;
     margin: 0.75rem 0;
     font-weight: lighter;
+}
+
+strong {
+    font-weight: bold;
+    color: var(--font-destaque);
 }
 
 .logo {
