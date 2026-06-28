@@ -272,3 +272,62 @@ header > a#botao {
     line-height: 1.75;
     opacity: 0.85;
 }
+
+#main2 {
+  padding: 32px 16px;
+}
+
+/* Substituir as cores - revisar o código */
+#main2 > article:first-child h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--secundary);
+  margin-bottom: 12px;
+}
+
+#main2 > article:first-child p {
+  font-size: 13px;
+  line-height: 1.75;
+  color: #d4c9b0;
+  opacity: 0.85;
+  margin-bottom: 10px;
+}
+
+.steps {
+  border-left: 1px solid var(--secundary);
+  margin-top: 28px;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 12px;
+  padding: 0 0 32px 16px;
+}
+
+.step-number {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--secundary);
+  opacity: 0.6;
+  padding-top: 3px;
+}
+
+.step-content h3 {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--secundary);
+  margin-bottom: 8px;
+}
+
+.step-content p {
+  font-size: 13px;
+  line-height: 1.75;
+  color: #d4c9b0;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
