@@ -16,8 +16,9 @@
     --font-button: "Inter", sans-serif;
     --serif: "DM Serif Display", serif;
 
-    --background: #111008;
+    --background: #0B0507;
     --background2: #161410;
+    --backgroud3: black;
     --primary: #E8608A;
     --secundary: #C9A84C;
     
@@ -277,7 +278,6 @@ header > a#botao {
   padding: 32px 16px;
 }
 
-/* Substituir as cores - revisar o código */
 #main2 > article:first-child h2 {
   font-size: 20px;
   font-weight: 700;
@@ -288,7 +288,6 @@ header > a#botao {
 #main2 > article:first-child p {
   font-size: 13px;
   line-height: 1.75;
-  color: #d4c9b0;
   opacity: 0.85;
   margin-bottom: 10px;
 }
@@ -327,7 +326,72 @@ header > a#botao {
 .step-content p {
   font-size: 13px;
   line-height: 1.75;
-  color: #d4c9b0;
   opacity: 0.85;
   margin-bottom: 8px;
+}
+
+/* CTA final */
+
+#cta {
+    margin-top: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#cta > h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#cta > h2 > span {
+    display: block;
+    color: var(--primary);
+}
+
+#cta > p {
+    text-align: center;
+    font-size: 13px;
+}
+
+#cta a {
+    text-align: center;
+    background-color: var(--secundary);
+    color: var(--font-color-reverse);
+    border-radius: 6px;
+    padding: 8px 0;
+    font-family: var(--font-button);
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+footer {
+    border-top: 1px solid var(--secundary);
+    background-color: var(--background3);
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer > p.sublogo {
+    margin-top: 0;
+}
+
+footer > nav {
+    display: flex;
+    justify-items: center;
+    opacity: 75%;
+}
+
+footer > nav > a {
+    margin: 0px 10px;
+}
+
+footer > p.copy {
+    opacity: 40%;
 }
