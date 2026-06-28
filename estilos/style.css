@@ -44,6 +44,14 @@ main {
     margin: 0 auto;
 }
 
+main > section {
+    margin-top: 32px;
+}
+
+main > section:first-of-type {
+    margin-top: 0;
+}
+
 h1, h2, h3 {
     font-family: var(--font-title);
     color: var(--title-color);
@@ -52,13 +60,14 @@ h1, h2, h3 {
 
 /* Configurações MobileFirst */
 
+/* Configurações gerais */
 body {
     padding: 0 16px;
 }
 
 h1 {font-size: 24px;}
 
-h2 {font-size: 20px;}
+h2 {font-size: 20px; margin-bottom: 20px;}
 
 h3 {font-size: 17px;}
 
@@ -75,6 +84,7 @@ strong {
     color: var(--font-destaque);
 }
 
+/* Header */
 .logo {
     font-family: var(--font-title);
     color: var(--secundary);
@@ -113,6 +123,7 @@ header > a#botao {
     border: 1px solid rgba(0, 0, 0, 0.514);
 }
 
+/* Hero */
 #hero {
     display: flex;
     flex-flow: column nowrap;
@@ -204,8 +215,8 @@ header > a#botao {
     margin-bottom: 50px;
 }
 
+/* Seção: Problema */
 #problema {
-    margin-top: 32px;
     display: flex;
     flex-flow: column;
 }
@@ -216,6 +227,11 @@ header > a#botao {
 }
 
 #problema > h2 > span {
+    display: block;
+    color: var(--primary);
+}
+
+#problema > h2 > span > span {
     display: block;
     color: var(--primary);
 }
@@ -237,8 +253,8 @@ header > a#botao {
     line-height: 1.7;
 }
 
+/* Seção: Quando você não está na sala */
 #main1 {
-    margin-top: 20px;
     display: grid;
     grid-template:  80px repeat(3, 1fr) / auto;
     gap: 20px;
@@ -280,6 +296,7 @@ header > a#botao {
     opacity: 0.85;
 }
 
+/* Seção: O ponto de virada */
 #main2 {
   padding: 32px 16px;
 }
@@ -374,6 +391,7 @@ header > a#botao {
     margin-bottom: 30px;
 }
 
+/* footer */
 footer {
     border-top: 1px solid var(--secundary);
     background-color: var(--background3);

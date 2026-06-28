@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+/* Código para Medias Queries */
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    /* Configurações gerais */
+    body {
+        padding: 0 24px;
+    }
+
+    main > section {margin-top: 40px;}
+    h1 {font-size: 32px;}
+    h2 {font-size: 22px; margin-bottom: 20px;}
+    h3 {font-size: 20px;}
+
+    p {
+        font-family: var(--font-display);
+        font-size: 16px;
+        line-height: 1.65em;
+        margin: 0.75rem 0;
+    }
+
+    /* Configurações individuais */
+    header > a#botao {
+        padding: 10px 24px;
+    }
+
+    .monalisa > nav > a.cta {
+        padding: 14px 0;
+    }
+}
+
+@media screen and (min-width: 620px) {
+    .monalisa {
+        background-image: url('../imagens/monalisa-mobile2.jpg');
+        background-position: center center;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        padding: 0 24px;
+    }
+
+    main {
+        max-width: 720px;
+        padding: 0 32px;
+    }
+
+    main > section {margin-top: 56px;}
+    h1 {font-size: 40px;}
+    h2 {font-size: 26px; margin-bottom: 20px;}
+    h3 {font-size: 20px;}
+
+    p {
+        font-family: var(--font-display);
+        font-size: 17px;
+        line-height: 1.7em;
+        margin: 0.75rem 0;
+    }
+
+    /* Configurações individuais */
+    /* Header */
+    header > a#botao {
+        padding: 10px 24px;
+    }
+
+    header > nav {
+        display: block;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    /* Hero */
+    .monalisa > nav > a.cta {
+        padding: 14px 0;
+    }
+
+    .monalisa > .item > p, .monalisa > .item > span.conti-p {
+        opacity: 1;
+        font-size: 16px;
+    }
+
+    /* Seção: Problema */
+    #problema > h2 > span > span {
+        display: inline;
+    }
+}
+
+
+
