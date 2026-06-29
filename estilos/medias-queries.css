@@ -1,4 +1,21 @@
 @charset "UTF-8";
+:root {
+    --font-display: "Inter", sans-serif;
+    --font-title: "Inter", sans-serif;
+    --font-button: "Inter", sans-serif;
+    --serif: "DM Serif Display", serif;
+
+    --background: #0B0507;
+    --background2: #161410;
+    --backgroud3: black;
+    --primary: #E8608A;
+    --secundary: #C9A84C;
+    
+    --font-color: #d4c9b0;
+    --font-destaque: #F0E8D5;
+    --title-color: #F0E8D5;
+    --font-color-reverse: rgb(20, 20, 19);
+}
 
 /* Código para Medias Queries */
 
@@ -65,8 +82,14 @@
         padding: 10px 24px;
     }
 
+    
     header > nav {
         display: block;
+    }
+
+    header > nav > a {
+        color: var(--secundary);
+        margin: 0 10px;
     }
 
     .logo {
@@ -86,6 +109,89 @@
     /* Seção: Problema */
     #problema > h2 > span > span {
         display: inline;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+
+    main {
+        max-width: 1100px;
+        padding: 0 48px;
+    }
+
+    main > section {margin-top: 96px;}
+    h1 {font-size: 45px;}
+    h2 {font-size: 35px; margin-bottom: 35px;}
+    h3 {font-size: 26px;}
+
+    p {
+        font-family: var(--font-display);
+        font-size: 18px;
+        line-height: 1.75em;
+        margin: 0.75rem 0;
+    }
+
+    /* Configurações individuais */
+    /* Header */
+    header > a#botao {
+        padding: 10px 24px;
+    }
+
+    
+    header > nav {
+        display: block;
+    }
+
+    header > nav > a {
+        color: var(--secundary);
+        margin: 0 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    /* Hero */
+    .monalisa {
+        background-image: url('../imagens/monalisa-desktop.webp');
+        background-position: center center;
+        display: grid;
+        justify-items: center;
+        grid-template: 15% 2fr 1fr 25% / 2fr 3fr;
+        gap: 30px;
+    }
+
+    .monalisa > div {
+        grid-area: 2 / 2 / 3 / -1;
+    }
+
+    .monalisa > nav {
+        grid-area: 3 / 2 / 4 / -1;
+    }
+
+    .monalisa > nav > a.cta {
+        padding: 14px 0;
+        width: 300px;
+    }
+
+    .monalisa > .item > p, .monalisa > .item > span.conti-p {
+        opacity: 1;
+        font-size: 16px;
+    }
+
+    /* Seção: Problema */
+    #problema > h2 > span > span {
+        display: inline;
+    }
+
+    /* Seção Quando você não está na sala */
+    #main1 {
+        grid-template: 80px auto / repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    #main1 > h2 {
+        grid-area: 1 / 1 / 2 / -1;
     }
 }
 
