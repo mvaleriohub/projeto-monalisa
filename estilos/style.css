@@ -162,6 +162,7 @@ header > a#botao {
     margin-top: 80px;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
     text-shadow: 0 0 50px rgb(0, 0, 0), 0 0 100px rgb(0, 0, 0);
 }
 
@@ -212,6 +213,7 @@ header > a#botao {
     text-decoration: none;
     text-transform: uppercase;
     width: 70%;
+    max-width: 500px;
     margin-bottom: 50px;
 }
 
