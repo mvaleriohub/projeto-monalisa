@@ -86,11 +86,12 @@ strong {
 
 /* Header */
 .logo {
-    font-family: var(--font-title);
     color: var(--secundary);
     font-size: 1em;
     font-weight: lighter;
     font-style: italic;
+    font-family: var(--serif);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.459), 0 0 50px rgb(0, 0, 0), 0 0 100px rgb(0, 0, 0);
 }
 
 header {
@@ -102,11 +103,6 @@ header {
     position: absolute;
 
     padding: 5px 20px;
-}
-
-header > p.logo {
-    font-family: var(--serif);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.459), 0 0 50px rgb(0, 0, 0), 0 0 100px rgb(0, 0, 0);
 }
 
 header > nav {
@@ -391,26 +387,34 @@ footer {
     border-top: 1px solid var(--secundary);
     background-color: var(--background3);
     margin-top: 30px;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+    padding: 24px 16px;
     text-align: center;
 }
 
-footer > p.sublogo {
-    margin-top: 0;
+footer > .footer-content {
+    max-width: 480px;
+    margin: 0 auto;
+    display: grid;
+    gap: 14px;
 }
 
-footer > nav {
+footer nav > .social-links {
+    list-style: none;
     display: flex;
-    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
     opacity: 75%;
 }
 
-footer > nav > a {
-    margin: 0px 10px;
+footer nav > .social-links > li > a {
+    padding: 4px 8px;
 }
 
-footer > p.copy {
+footer p.copy {
+    max-width: 38ch;
+    margin: 0 auto;
     opacity: 40%;
 }
