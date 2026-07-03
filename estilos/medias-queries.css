@@ -8,6 +8,7 @@
     --background: #0B0507;
     --background2: #161410;
     --backgroud3: black;
+    --background-header: #0b050744;
     --primary: #E8608A;
     --secundary: #C9A84C;
     
@@ -52,6 +53,21 @@
         background-image: url('../imagens/monalisa-mobile2.jpg');
         background-position: center center;
     }
+
+    footer nav > .social-links {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer nav > .social-links > li:not(:last-child)::after {
+        content: "•";
+        margin-left: 16px;
+        opacity: 0.6;
+    }
+
+    footer p.copy {
+        max-width: 50ch;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) /* Tablet */ {
@@ -82,6 +98,11 @@
         padding: 10px 24px;
     }
     
+    header {
+        position: fixed;
+        box-shadow: inset 0px 44px 100px var(--background-header), 0px 4px 147px var(--background-header);
+    }
+
     header > nav {
         display: block;
     }
@@ -132,6 +153,11 @@
 
     /* Configurações individuais */
     /* Header */
+    header {
+        position: fixed;
+        box-shadow: inset 0px 44px 100px var(--background-header), 0px 4px 147px var(--background-header);
+    }
+
     header > a#botao {
         padding: 10px 24px;
     }
@@ -192,6 +218,23 @@
     #main1 > h2 {
         grid-area: 1 / 1 / 2 / -1;
     }
+
+    /* footer */
+    footer > div.footer-content {
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    }
+
+    footer > div.footer-content > p.logo {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    footer > div.footer-content > nav {
+        grid-area: 2 / 1 / -1 / 2;
+    }
+    
+    footer > div.footer-content > p.copy {
+        grid-area: 1 / -2 / 2 / -1;
+    }
 }
 
 @media screen and (min-width: 1441px) and (max-width: 1920px) /* wide */ {
@@ -215,10 +258,14 @@
 
     /* Configurações individuais */
     /* Header */
+    header {
+        position: fixed;
+        box-shadow: inset 0px 44px 100px var(--background-header), 0px 4px 147px var(--background-header);
+    }
+
     header > a#botao {
         padding: 10px 24px;
     }
-
     
     header > nav {
         display: block;
@@ -298,10 +345,14 @@
 
     /* Configurações individuais */
     /* Header */
+    header {
+        position: fixed;
+        box-shadow: inset 0px 44px 100px var(--background-header), 0px 4px 147px var(--background-header);
+    }
+
     header > a#botao {
         padding: 10px 24px;
     }
-
     
     header > nav {
         display: block;
