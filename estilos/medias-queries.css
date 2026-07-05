@@ -212,7 +212,6 @@
     /* Seção Quando você não está na sala */
     #main1 {
         grid-template: 80px auto / repeat(3, 1fr);
-        gap: 32px;
     }
 
     #main1 > h2 {
@@ -221,7 +220,7 @@
 
     /* footer */
     footer > div.footer-content {
-        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+        grid-template: 1fr 1fr / 1fr 2fr;
     }
 
     footer > div.footer-content > p.logo {
@@ -233,7 +232,8 @@
     }
     
     footer > div.footer-content > p.copy {
-        grid-area: 1 / -2 / 2 / -1;
+        grid-area: 1 / -2 / -1 / -1;
+        align-self: center;
     }
 }
 
