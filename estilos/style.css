@@ -393,7 +393,8 @@ footer {
 
 footer > .footer-content {
     margin: 0 auto;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 14px;
 }
 
@@ -413,7 +414,6 @@ footer nav > .social-links > li > a {
 }
 
 footer p.copy {
-    max-width: 38ch;
     margin: 0 auto;
     opacity: 40%;
 }
