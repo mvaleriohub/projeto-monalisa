@@ -62,10 +62,6 @@
         margin-left: 16px;
         opacity: 0.6;
     }
-
-    footer p.copy {
-        max-width: 50ch;
-    }
 }
 
 @media screen and (min-width: 768px) /* Tablet */ {
@@ -167,10 +163,15 @@
     }
 
     /* footer */
-    .footer-content {
+    footer > .footer-content {
         display: grid;
-        grid-template: auto / 1fr 1fr calc(1fr + 20px);
+        grid-template: auto / repeat(3, 1fr);
+        gap: 0px;
         align-items: center;
+    }
+
+    footer > .footer-content > p.copy {
+        margin: 0;
     }
 }
 
