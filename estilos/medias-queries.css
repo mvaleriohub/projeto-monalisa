@@ -11,17 +11,16 @@
     --background-header: #0b050744;
     --primary: #E8608A;
     --secundary: #C9A84C;
-    
+
     --font-color: #d4c9b0;
     --font-destaque: #F0E8D5;
     --title-color: #F0E8D5;
     --font-color-reverse: rgb(20, 20, 19);
 }
 
-/* Código para Medias Queries */
+/* Media Queries — Mobile First */
 
-@media screen and (min-width: 481px) and (max-width: 767px) /* Mobile G */ {
-    /* Configurações gerais */
+@media screen and (min-width: 481px) /* Mobile G */ {
     body {
         padding: 0 24px;
     }
@@ -38,7 +37,6 @@
         margin: 0.75rem 0;
     }
 
-    /* Configurações individuais */
     header > a#botao {
         padding: 10px 24px;
     }
@@ -70,11 +68,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) /* Tablet */ {
-    body {
-        padding: 0 24px;
-    }
-
+@media screen and (min-width: 768px) /* Tablet */ {
     main {
         max-width: 720px;
         padding: 0 32px;
@@ -92,12 +86,7 @@
         margin: 0.75rem 0;
     }
 
-    /* Configurações individuais */
     /* Header */
-    header > a#botao {
-        padding: 10px 24px;
-    }
-    
     header {
         position: fixed;
         box-shadow: inset 0px 44px 100px var(--background-header), 0px 4px 147px var(--background-header);
@@ -117,23 +106,18 @@
     }
 
     /* Hero */
-    .monalisa > nav > a.cta {
-        padding: 14px 0;
-    }
-
     .monalisa > .item > p, .monalisa > .item > span.conti-p {
         opacity: 1;
         font-size: 16px;
     }
 
-    /* Seção: Problema */
+    /* Problema */
     #problema > h2 > span > span {
         display: inline;
     }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1440px) /* Desktop */ {
-
+@media screen and (min-width: 1025px) /* Desktop */ {
     main {
         max-width: 1100px;
         padding: 0 48px;
@@ -151,31 +135,6 @@
         margin: 0.75rem 0;
     }
 
-    /* Configurações individuais */
-    /* Header */
-    header {
-        position: fixed;
-        box-shadow: inset 0px 44px 100px var(--background-header), 0px 4px 147px var(--background-header);
-    }
-
-    header > a#botao {
-        padding: 10px 24px;
-    }
-
-    
-    header > nav {
-        display: block;
-    }
-
-    header > nav > a {
-        color: var(--secundary);
-        margin: 0 10px;
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
     /* Hero */
     .monalisa {
         background-image: url('../imagens/monalisa-desktop.webp');
@@ -195,21 +154,10 @@
     }
 
     .monalisa > nav > a.cta {
-        padding: 14px 0;
         width: 300px;
     }
 
-    .monalisa > .item > p, .monalisa > .item > span.conti-p {
-        opacity: 1;
-        font-size: 16px;
-    }
-
-    /* Seção: Problema */
-    #problema > h2 > span > span {
-        display: inline;
-    }
-
-    /* Seção Quando você não está na sala */
+    /* Seção principal */
     #main1 {
         grid-template: 80px auto / repeat(3, 1fr);
     }
@@ -219,26 +167,14 @@
     }
 
     /* footer */
-    footer > div.footer-content {
-        grid-template: 1fr 1fr / 1fr 2fr;
-    }
-
-    footer > div.footer-content > p.logo {
-        grid-area: 1 / 1 / 2 / 2;
-    }
-
-    footer > div.footer-content > nav {
-        grid-area: 2 / 1 / -1 / 2;
-    }
-    
-    footer > div.footer-content > p.copy {
-        grid-area: 1 / -2 / -1 / -1;
-        align-self: center;
+    .footer-content {
+        display: grid;
+        grid-template: auto / 1fr 1fr calc(1fr + 20px);
+        align-items: center;
     }
 }
 
-@media screen and (min-width: 1441px) and (max-width: 1920px) /* wide */ {
-
+@media screen and (min-width: 1441px) /* Wide */ {
     main {
         max-width: 1280px;
         padding: 0 80px;
@@ -246,7 +182,7 @@
 
     main > section {margin-top: 120px;}
     h1 {font-size: 60px;}
-    h2 {font-size: 38px; margin-bottom: 40px;}
+    h2 {margin-bottom: 40px;}
     h3 {font-size: 19px;}
 
     p {
@@ -256,158 +192,17 @@
         margin: 0.75rem 0;
     }
 
-    /* Configurações individuais */
-    /* Header */
-    header {
-        position: fixed;
-        box-shadow: inset 0px 44px 100px var(--background-header), 0px 4px 147px var(--background-header);
-    }
-
-    header > a#botao {
-        padding: 10px 24px;
-    }
-    
-    header > nav {
-        display: block;
-    }
-
-    header > nav > a {
-        color: var(--secundary);
-        margin: 0 10px;
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
-    /* Hero */
-    .monalisa {
-        background-image: url('../imagens/monalisa-desktop.webp');
-        background-position: center top;
-        display: grid;
-        justify-items: center;
-        grid-template: 15% 2fr 1fr 25% / 2fr 3fr;
-        gap: 30px;
-    }
-
-    .monalisa > div {
-        grid-area: 2 / 2 / 3 / -1;
-    }
-
-    .monalisa > nav {
-        grid-area: 3 / 2 / 4 / -1;
-    }
-
-    .monalisa > nav > a.cta {
-        padding: 14px 0;
-        width: 300px;
-    }
-
-    .monalisa > .item > p, .monalisa > .item > span.conti-p {
-        opacity: 1;
-        font-size: 16px;
-    }
-
-    /* Seção: Problema */
-    #problema > h2 > span > span {
-        display: inline;
-    }
-
-    /* Seção Quando você não está na sala */
     #main1 {
-        grid-template: 80px auto / repeat(3, 1fr);
         gap: 32px;
-    }
-
-    #main1 > h2 {
-        grid-area: 1 / 1 / 2 / -1;
     }
 }
 
-@media screen and (min-width: 1921px) {
-
-    main {
-        max-width: 1280px;
-        padding: 0 80px;
-    }
-
-    main > section {margin-top: 120px;}
-    h1 {font-size: 60px;}
-    h2 {font-size: 40px; margin-bottom: 40px;}
+@media screen and (min-width: 1921px) /* Ultrawide */ {
+    h2 {font-size: 40px;}
     h3 {font-size: 24px;}
 
-    p {
-        font-family: var(--font-display);
-        font-size: 18px;
-        line-height: 1.8em;
-        margin: 0.75rem 0;
-    }
-
-    /* Configurações individuais */
-    /* Header */
-    header {
-        position: fixed;
-        box-shadow: inset 0px 44px 100px var(--background-header), 0px 4px 147px var(--background-header);
-    }
-
-    header > a#botao {
-        padding: 10px 24px;
-    }
-    
-    header > nav {
-        display: block;
-    }
-
-    header > nav > a {
-        color: var(--secundary);
-        margin: 0 10px;
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
-    /* Hero */
     .monalisa {
         background-image: url('../imagens/monalisa-ultrawide3.webp');
         background-position: center right;
-        display: grid;
-        justify-items: center;
-        grid-template: 15% 2fr 1fr 25% / 2fr 3fr;
-        gap: 30px;
-    }
-
-    .monalisa > div {
-        grid-area: 2 / 2 / 3 / -1;
-    }
-
-    .monalisa > nav {
-        grid-area: 3 / 2 / 4 / -1;
-    }
-
-    .monalisa > nav > a.cta {
-        padding: 14px 0;
-        width: 300px;
-    }
-
-    .monalisa > .item > p, .monalisa > .item > span.conti-p {
-        opacity: 1;
-        font-size: 16px;
-    }
-
-    /* Seção: Problema */
-    #problema > h2 > span > span {
-        display: inline;
-    }
-
-    /* Seção Quando você não está na sala */
-    #main1 {
-        grid-template: 80px auto / repeat(3, 1fr);
-        gap: 32px;
-    }
-
-    #main1 > h2 {
-        grid-area: 1 / 1 / 2 / -1;
     }
 }
-
