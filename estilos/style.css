@@ -10,6 +10,11 @@
     color: var(--font-color);
 }
 
+:focus-visible {
+    outline: 2px solid var(--secundary);
+    outline-offset: 3px;
+}
+
 :root {
     --font-display: "Inter", sans-serif;
     --font-title: "Inter", sans-serif;
@@ -27,12 +32,15 @@
     --font-destaque: #F0E8D5;
     --title-color: #F0E8D5;
     --font-color-reverse: rgb(20, 20, 19);
+
+    --transition: 0.3s ease;
 }
 
 body {
     position: relative;
     background-color: var(--background);
     font-family: var(--font-display); /* fallback — sem isso, a#botao, nav e links do footer caíam pra fonte serif padrão do navegador */
+    overflow-x: hidden; /* evita um scroll horizontal fantasma que o 100vw do footer pode causar em telas com scrollbar visível */
 }
 
 header {
@@ -74,8 +82,8 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(1.25rem, 1rem + 1.6vw, 1.9rem); /* 20px → 36px */
-    margin-bottom: clamp(1.25rem, 1rem + 1.2vw, 1.9rem);
+    font-size: clamp(1.25rem, 1rem + 1.6vw, 2.25rem); /* 20px → 36px */
+    margin-bottom: clamp(1.25rem, 1rem + 1.2vw, 2.5rem);
 }
 
 h3 {
@@ -106,6 +114,7 @@ strong {
     font-style: italic;
     font-family: var(--serif);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.459), 0 0 50px rgb(0, 0, 0), 0 0 100px rgb(0, 0, 0);
+    justify-self: right;
 }
 
 header {
@@ -135,12 +144,12 @@ header > a#botao {
     border-radius: 6px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.459);
     border: 1px solid rgba(0, 0, 0, 0.514);
+    transition: background-color var(--transition), transform var(--transition);
 }
 
 header > a#botao:hover {
-    background-color: var(--font-color);
-    color: var(--font-color-reverse);
-
+    background-color: var(--font-destaque);
+    transform: translateY(-2px);
 }
 
 /* Hero */
@@ -234,11 +243,12 @@ header > a#botao:hover {
     text-decoration: none;
     text-transform: uppercase;
     margin-bottom: 50px;
+    transition: background-color var(--transition), transform var(--transition);
 }
 
 .monalisa > nav > a.cta:hover {
-    background-color: var(--font-color);
-    color: var(--font-color-reverse);
+    background-color: var(--font-destaque);
+    transform: translateY(-2px);
 }
 
 /* Seção: Problema */
@@ -306,19 +316,11 @@ header > a#botao:hover {
     padding: 20px 18px;
 }
 
-#main1 > article:hover {
-    border-left: 2px solid var(--primary);
-}
-
 #main1 > article > h3 {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--secundary);
     margin-bottom: 10px;
-}
-
-#main1 > article:hover > h3 {
-    color: var(--primary);
 }
 
 #main1 > article > p {
@@ -416,11 +418,12 @@ header > a#botao:hover {
     text-transform: uppercase;
     margin-top: 10px;
     margin-bottom: 30px;
+    transition: background-color var(--transition), transform var(--transition);
 }
 
 #cta a:hover {
-    background-color: var(--primary);
-    color: var(--font-color-reverse);
+    background-color: var(--font-destaque);
+    transform: translateY(-2px);
 }
 
 /* footer */
@@ -428,11 +431,10 @@ footer {
     border-top: 1px solid var(--secundary);
     background-color: var(--background3);
     margin-top: 30px;
-    padding: 24px 16px;
-    text-align: center;
-    width: 100vw;
+    width: 100vw; /* quebra o padding herdado do body, que restringia a largura */
     margin-left: calc(50% - 50vw);
     padding: 24px 16px;
+    text-align: center;
 }
 
 footer > .footer-content {
@@ -441,6 +443,8 @@ footer > .footer-content {
     flex-direction: column;
     gap: 14px;
 }
+
+@media screen and (max-width: 768px) {footer nav {display: none;} footer .copy > span{display: block;}}
 
 footer nav > .social-links {
     list-style: none;
@@ -455,6 +459,7 @@ footer nav > .social-links {
 
 footer nav > .social-links > li > a {
     padding: 4px 8px;
+    transition: color var(--transition);
 }
 
 footer nav > .social-links > li > a:hover {
@@ -464,4 +469,5 @@ footer nav > .social-links > li > a:hover {
 footer p.copy {
     margin: 0 auto;
     opacity: 40%;
+    justify-self: left;
 }
