@@ -172,7 +172,7 @@ header > a#botao:hover {
     background-size: cover;
     background-position: center bottom;
     box-shadow: inset 0px -94px 65px var(--background);
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     align-self: center;
 }
