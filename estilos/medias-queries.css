@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+/* As custom properties (:root) agora vivem só no style.css —
+   estavam duplicadas nos dois arquivos, o que foi justamente
+   como o typo em --backgroud3 passou despercebido. */
+
 /* Media Queries — Mobile First */
 
 @media screen and (min-width: 481px) /* Mobile G */ {
@@ -53,6 +57,12 @@
     header > nav > a {
         color: var(--secundary);
         margin: 0 10px;
+        text-decoration: none;
+        transition: color var(--transition);
+    }
+
+    header > nav > a:hover {
+        color: var(--font-destaque);
     }
 
     .logo {
@@ -110,11 +120,21 @@
         grid-area: 1 / 1 / 2 / -1;
     }
 
+    #main1 > article:hover > h3 {
+        color: var(--primary);
+    }
+    
+    #main1 > article:hover {
+        border-left: 2px solid var(--primary);
+    }
+
+    
     #cta > p > strong {
         display: block;
     }
 
     /* footer */
+
     footer > .footer-content {
         display: grid;
         grid-template: auto / repeat(3, 1fr);
